@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.cruk.clarity.api.cache","l":"CacheStatefulBehaviour"},{"p":"org.cruk.clarity.api.cache","l":"ClarityAPICache"},{"p":"org.cruk.clarity.api.cache","l":"EhCacheManagerFactory"}];updateSearchResults();
