@@ -2,7 +2,7 @@ package org.cruk.clarity.api.cache.spring;
 
 import java.time.Duration;
 
-import org.cruk.clarity.api.cache.CacheElementWrapper;
+import org.cruk.clarity.api.cache.internal.CacheElementWrapper;
 import org.cruk.clarity.api.spring.ClarityClientConfiguration;
 import org.ehcache.CacheManager;
 import org.ehcache.config.CacheConfiguration;

@@ -47,6 +47,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.cruk.clarity.api.ClarityAPI;
 import org.cruk.clarity.api.StatefulOverride;
+import org.cruk.clarity.api.cache.internal.CacheElementWrapper;
 import org.cruk.clarity.api.cache.unittests.CRUKCICheck;
 import org.cruk.clarity.api.cache.unittests.ClarityClientCacheTestConfiguration;
 import org.cruk.clarity.api.http.AuthenticatingClientHttpRequestFactory;

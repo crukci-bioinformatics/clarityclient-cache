@@ -16,9 +16,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.cruk.clarity.api.cache;
+package org.cruk.clarity.api.cache.internal;
 
 import java.io.Serializable;
+
+import org.cruk.clarity.api.cache.ClarityAPICache;
 
 /**
  * A class emulating the EhCache 2.x {@code CacheElement} class, which

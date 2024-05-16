@@ -42,6 +42,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.cruk.clarity.api.ClarityAPI;
 import org.cruk.clarity.api.StatefulOverride;
+import org.cruk.clarity.api.cache.internal.CacheElementWrapper;
 import org.cruk.clarity.api.impl.ClarityAPIImpl;
 import org.cruk.clarity.api.impl.ClarityAPIInternal;
 import org.cruk.clarity.api.impl.LatestVersionsResetAspect;
@@ -85,7 +86,7 @@ public class ClarityAPICache
     /**
      * The version to use for objects and requests that give no state.
      */
-    static final long NO_STATE_VALUE = 0L;
+    public static final long NO_STATE_VALUE = 0L;
 
     /**
      * Logger.

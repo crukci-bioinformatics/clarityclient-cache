@@ -28,32 +28,18 @@
  * </p>
  *
  * <p>
- * The cache is implemented using EhCache. To make use of it, you need to include
- * the file {@code org/cruk/clarity/api/clarity-cache-context.xml}
- * in your Spring application context path. Its individual caches are configured with
- * the file {@code org/cruk/clarity/api/ehcache.xml}. The default version of
+ * The cache is implemented using EhCache. The default version of
  * this file is packaged with the JAR, so if you need to change it create a replacement
  * that is before this project's JAR file on the class path.
  * </p>
  *
  * <p>
- * If you do not use the cache, you can
- * exclude it from this project's dependencies in Maven:
+ * Caches are configured in the {@link org.cruk.clarity.api.cache.spring.ClarityClientCacheConfiguration}
+ * Spring configuration class. If these need to be changed, create a subclass for your own configuration
+ * and override the
+ * {@link org.cruk.clarity.api.cache.spring.ClarityClientCacheConfiguration#clarityCacheManager() clarityCacheManager()}
+ * method, creating your caches as necessary.
  * </p>
- *
- * <pre>
- *     &lt;dependency&gt;
- *         &lt;groupId&gt;org.cruk.clarity&lt;/groupId&gt;
- *         &lt;artifactId&gt;clarity-client&lt;/artifactId&gt;
- *         &lt;version&gt;...&lt;/version&gt;
- *         &lt;exclusions&gt;
- *             &lt;exclusion&gt;
- *                 &lt;groupId&gt;org.ehcache&lt;/groupId&gt;
- *                 &lt;artifactId&gt;ehcache&lt;/artifactId&gt;
- *             &lt;/exclusion&gt;
- *         &lt;/exclusions&gt;
- *     &lt;/dependency&gt;
- * </pre>
  *
  * @see <a href="https://ehcache.org/">https://ehcache.org/</a>
  */

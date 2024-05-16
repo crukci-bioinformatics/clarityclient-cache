@@ -19,7 +19,7 @@
 /**
  * The Clarity Java client cache for Clarity 6+.
  */
-open module org.cruk.clarity.api.cache
+module org.cruk.clarity.api.cache
 {
     requires transitive org.cruk.clarity.api;
     requires transitive ehcache;
@@ -30,4 +30,9 @@ open module org.cruk.clarity.api.cache
     requires org.slf4j;
 
     exports org.cruk.clarity.api.cache;
+    exports org.cruk.clarity.api.cache.spring;
+
+    opens org.cruk.clarity.api.cache;
+    opens org.cruk.clarity.api.cache.spring;
+    opens org.cruk.clarity.api.cache.internal to ehcache;
 }

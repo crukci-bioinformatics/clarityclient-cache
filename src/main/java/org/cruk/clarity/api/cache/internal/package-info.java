@@ -17,6 +17,7 @@
  */
 
 /**
- * Spring configuration for the Clarity API Client cache.
+ * Package for classes internal to the Clarity API Cache that are not
+ * exported through the module system.
  */
-package org.cruk.clarity.api.cache.spring;
+package org.cruk.clarity.api.cache.internal;
