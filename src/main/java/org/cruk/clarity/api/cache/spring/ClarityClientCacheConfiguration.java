@@ -1,6 +1,6 @@
 package org.cruk.clarity.api.cache.spring;
 
-import org.cruk.clarity.api.ClarityAPI;
+import org.cruk.clarity.api.cache.ClarityAPICache;
 import org.cruk.clarity.api.cache.EhCacheManagerFactory;
 import org.cruk.clarity.api.spring.ClarityClientConfiguration;
 import org.ehcache.CacheManager;
@@ -25,7 +25,7 @@ public class ClarityClientCacheConfiguration
     @Bean
     public FactoryBean<CacheManager> clarityCacheManager()
     {
-        ClassPathResource config = new ClassPathResource("ehcache.xml", ClarityAPI.class);
+        ClassPathResource config = new ClassPathResource("ehcache.xml", ClarityAPICache.class);
 
         EhCacheManagerFactory factory = new EhCacheManagerFactory();
         factory.setConfigLocation(config);
