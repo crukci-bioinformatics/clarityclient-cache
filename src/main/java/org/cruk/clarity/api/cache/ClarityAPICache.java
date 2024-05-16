@@ -161,7 +161,6 @@ public class ClarityAPICache
      */
     @Autowired
     @Qualifier("clarityCacheManager")
-    @SuppressWarnings("exports")
     public void setCacheManager(CacheManager cacheManager)
     {
         this.cacheManager = cacheManager;

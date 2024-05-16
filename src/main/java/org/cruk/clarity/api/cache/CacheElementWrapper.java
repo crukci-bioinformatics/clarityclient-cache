@@ -27,7 +27,7 @@ import java.io.Serializable;
  *
  * @since 2.31
  */
-class CacheElementWrapper implements Serializable
+public class CacheElementWrapper implements Serializable
 {
     private static final long serialVersionUID = 5222412342746165964L;
 
