@@ -3,7 +3,6 @@ package org.cruk.clarity.api.cache.spring;
 import java.time.Duration;
 
 import org.cruk.clarity.api.cache.internal.CacheElementWrapper;
-import org.cruk.clarity.api.spring.ClarityClientConfiguration;
 import org.ehcache.CacheManager;
 import org.ehcache.config.CacheConfiguration;
 import org.ehcache.config.builders.CacheConfigurationBuilder;
@@ -15,7 +14,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.context.annotation.Import;
 
 import com.genologics.ri.LimsEntity;
 import com.genologics.ri.artifact.Artifact;
@@ -40,7 +38,6 @@ import com.genologics.ri.workflowconfiguration.Workflow;
 
 @Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@Import(ClarityClientConfiguration.class)
 @ComponentScan("org.cruk.clarity.api.cache")
 public class ClarityClientCacheConfiguration
 {

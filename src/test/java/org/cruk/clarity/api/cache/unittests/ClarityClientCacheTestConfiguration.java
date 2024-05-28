@@ -23,6 +23,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import org.cruk.clarity.api.ClarityAPI;
+import org.cruk.clarity.api.spring.ClarityClientConfiguration;
 import org.cruk.clarity.api.cache.spring.ClarityClientCacheConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +35,7 @@ import org.springframework.context.annotation.Import;
 import jakarta.annotation.PostConstruct;
 
 @Configuration
-@Import(ClarityClientCacheConfiguration.class)
+@Import({ClarityClientConfiguration.class, ClarityClientCacheConfiguration.class})
 public class ClarityClientCacheTestConfiguration
 {
     @Autowired
