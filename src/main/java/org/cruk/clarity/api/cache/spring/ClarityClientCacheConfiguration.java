@@ -37,7 +37,7 @@ import com.genologics.ri.stepconfiguration.ProtocolStep;
 import com.genologics.ri.workflowconfiguration.Workflow;
 
 @Configuration
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableAspectJAutoProxy(proxyTargetClass = false)
 @ComponentScan("org.cruk.clarity.api.cache")
 public class ClarityClientCacheConfiguration
 {
