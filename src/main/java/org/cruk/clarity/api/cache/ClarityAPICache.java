@@ -96,12 +96,7 @@ public class ClarityAPICache
     /**
      * The API this aspect will call through to.
      */
-    protected ClarityAPI api;
-
-    /**
-     * The API again, but via its internal interface.
-     */
-    protected ClarityAPIInternal apiCacheControl;
+    protected ClarityAPIInternal api;
 
     /**
      * The cache manager.
@@ -138,21 +133,9 @@ public class ClarityAPICache
      */
     @Autowired
     @Qualifier("clarityAPI")
-    public void setClarityAPI(ClarityAPI api)
+    public void setClarityAPI(ClarityAPIInternal api)
     {
         this.api = api;
-    }
-
-    /**
-     * Set the internal interface access to the API.
-     *
-     * @param internalApi The API bean, but through its internal interface.
-     */
-    @Autowired
-    @Qualifier("clarityAPI")
-    public void setInternalClarityAPI(ClarityAPIInternal internalApi)
-    {
-        this.apiCacheControl = internalApi;
     }
 
     /**
@@ -1492,7 +1475,7 @@ public class ClarityAPICache
      */
     protected CacheStatefulBehaviour getBehaviourForCall()
     {
-        StatefulOverride override = apiCacheControl.getStatefulOverride();
+        StatefulOverride override = api.getStatefulOverride();
         if (override == StatefulOverride.EXACT)
         {
             // Behave as if the whole cache was running in EXACT mode.
@@ -1510,7 +1493,7 @@ public class ClarityAPICache
      */
     protected boolean isFetchLatestVersions()
     {
-        return apiCacheControl.getStatefulOverride() == StatefulOverride.LATEST;
+        return api.getStatefulOverride() == StatefulOverride.LATEST;
     }
 
 }
