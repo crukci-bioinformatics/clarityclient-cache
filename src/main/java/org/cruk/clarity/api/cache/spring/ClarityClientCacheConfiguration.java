@@ -41,7 +41,11 @@ import com.genologics.ri.workflowconfiguration.Workflow;
 @ComponentScan("org.cruk.clarity.api.cache")
 public class ClarityClientCacheConfiguration
 {
-    protected final CacheConfiguration<String, CacheElementWrapper> smallMedium, smallLong, mediumShort, mediumMedium, largeShort;
+    protected CacheConfiguration<String, CacheElementWrapper> smallMedium;
+    protected CacheConfiguration<String, CacheElementWrapper> smallLong;
+    protected CacheConfiguration<String, CacheElementWrapper> mediumShort;
+    protected CacheConfiguration<String, CacheElementWrapper> mediumMedium;
+    protected CacheConfiguration<String, CacheElementWrapper> largeShort;
 
     public ClarityClientCacheConfiguration()
     {
